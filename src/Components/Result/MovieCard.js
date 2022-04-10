@@ -1,14 +1,14 @@
 import React from 'react'
 import MovieDetail from './MovieDetail'
 import style from './result.module.css'
-const MovieCard = () => {
+const MovieCard = (props) => {
   return (
     <div className={style.movie_card}>
-        <MovieDetail label='Episode' value='4' />
-        <MovieDetail label='Title' value='A New Hope' />
-        <MovieDetail label='Release Date' value='4/3/2022' />
-        <MovieDetail label='Director' value='George Lucas' />
-        <MovieDetail label='Producer' value='Rick McCallum' />
+        <MovieDetail label='Episode' value={props.movie.episode_id} />
+        <MovieDetail label='Title' value={props.movie.title} />
+        <MovieDetail label='Release Date' value={props.movie.release_date} />
+        <MovieDetail label='Director' value={props.movie.director} />
+        <MovieDetail label='Producer' value={props.movie.producer} />
     </div>
   )
 }
